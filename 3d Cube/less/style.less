@@ -1,0 +1,135 @@
+// out: ../css/style.css
+
+@side: #273c75;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma";
+}
+body {
+    perspective: 3500px;
+    perspective-origin: -800px -900px;
+}
+h1, h2, h3, h4, h5, h6, ul, li, a, span, div, p {
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma";
+    text-decoration: none;
+    list-style: none;
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+}
+
+.box {
+    transform-style: preserve-3d;
+    position: relative;
+    margin: 50px;
+    height: 250px;
+    width: 250px;
+    box-sizing: border-box;
+    .side {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0.7;
+        
+
+        &.front {
+            transform: translateZ(125px);
+            background-color: @side;
+        }
+        &.back {
+            transform: translateZ(-125px);
+            background-color: @side;
+        }
+        &.top {
+            background-color: @side;
+            transform: translateY(-125px) rotateX(90deg) ;
+        }
+        &.bottom {
+            background-color: @side;
+            transform: translateY(125px) rotateX(90deg) ;
+        }
+        &.left {
+            background-color: @side;
+            transform: translateX(-125px) rotateY(90deg);
+        }
+        &.right {
+            background-color: @side;
+            transform: translateX(125px) rotateY(90deg);
+        }
+    }
+}
+
+.btn-group {
+    margin-top: 100px;
+    text-align: center;
+
+    .btn {
+        display: inline-block;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        padding: 12px 20px;
+        border-radius: 2px;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+    #rng {
+        display: inline-block;
+        width: 300px;
+        box-sizing: border-box;
+        margin-left: 20px;
+    }
+}
+
+.arrows {
+    text-align: center;
+    position: relative;
+    margin: 100px auto;
+    width: 250px;
+    height: 90px;
+
+    .btn {
+        display: inline-block;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        padding: 12px 20px;
+        width: 75px;                
+        height: 40px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+    .up {
+        position: absolute;
+        top: 0;
+        left: 87.5px;
+    }
+
+    .down {
+        position: absolute;
+        bottom: 0;
+        left: 87.5px;
+    }
+
+    .left{
+        position: absolute;
+        left: 0;
+        top: 30px;
+    }
+
+    .right{
+        position: absolute;
+        right: 0;
+        top: 30px;
+    } 
+}

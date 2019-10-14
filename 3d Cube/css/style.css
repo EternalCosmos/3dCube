@@ -1,0 +1,159 @@
+html,
+body {
+  margin     : 0;
+  padding    : 0;
+  font-family: "Tahoma";
+}
+
+body {
+  perspective       : 3500px;
+  perspective-origin: -800px -900px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+span,
+div,
+p {
+  margin         : 0;
+  padding        : 0;
+  font-family    : "Tahoma";
+  text-decoration: none;
+  list-style     : none;
+  font-size      : 14px;
+  color          : #000;
+  font-weight    : normal;
+}
+
+.box-container {
+  margin         : 100px 0;
+  transform-style: preserve-3d;
+}
+
+.box-container .box {
+  transform-style: preserve-3d;
+  position       : relative;
+  margin         : 0 auto;
+  height         : 250px;
+  width          : 250px;
+  box-sizing     : border-box;
+}
+
+.box-container .box .side {
+  position: absolute;
+  top     : 0;
+  bottom  : 0;
+  right   : 0;
+  left    : 0;
+  opacity : 0.7;
+}
+
+.box-container .box .side.front {
+  transform       : translateZ(125px);
+  background-color: #273c75;
+}
+
+.box-container .box .side.back {
+  transform       : translateZ(-125px);
+  background-color: #273c75;
+}
+
+.box-container .box .side.top {
+  background-color: #273c75;
+  transform       : translateY(-125px) rotateX(90deg);
+}
+
+.box-container .box .side.bottom {
+  background-color: #273c75;
+  transform       : translateY(125px) rotateX(90deg);
+}
+
+.box-container .box .side.left {
+  background-color: #273c75;
+  transform       : translateX(-125px) rotateY(90deg);
+}
+
+.box-container .box .side.right {
+  background-color: #273c75;
+  transform       : translateX(125px) rotateY(90deg);
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.btn-group .btn {
+  display     : inline-block;
+  user-select : none;
+  color       : #000;
+  font-size   : 50px;
+  cursor      : pointer;
+  margin-right: 20px;
+}
+
+.btn-group .btn.play i {
+  display: none;
+}
+
+.btn-group .btn.play i.active {
+  display: inline-block;
+}
+
+.btn-group #range {
+  display    : inline-block;
+  width      : 300px;
+  box-sizing : border-box;
+  margin-left: 20px;
+}
+
+.arrows {
+  text-align: center;
+  position  : relative;
+  margin    : 50px auto;
+  width     : 250px;
+  height    : 90px;
+}
+
+.arrows .btn {
+  display         : inline-block;
+  user-select     : none;
+  padding         : 12px 20px;
+  width           : 75px;
+  height          : 40px;
+  box-sizing      : border-box;
+  border-radius   : 2px;
+  background-color: #000;
+  color           : #fff;
+  cursor          : pointer;
+}
+
+.arrows .up {
+  position: absolute;
+  top     : 0;
+  left    : 87.5px;
+}
+
+.arrows .down {
+  position: absolute;
+  bottom  : 0;
+  left    : 87.5px;
+}
+
+.arrows .left {
+  position: absolute;
+  left    : 0;
+  top     : 30px;
+}
+
+.arrows .right {
+  position: absolute;
+  right   : 0;
+  top     : 30px;
+}
